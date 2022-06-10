@@ -1,10 +1,2 @@
 # COGS118A Project template
-This is your group repo for your final project for COGS118A
-
-This repository is publicly visible! We will be using that feature to do peer review of projects.
-
-Template notebooks for each component are provided. Only work on the notebook prior to its due date. After each submission is due, move onto the next notebook (For example, after the proposal is due, start working in the Data Checkpoint notebook).
-
-This is your repo. You are free to manage the repo as you see fit, edit this README, add data files, add scripts, etc. So long as there are the four files above on due dates with the required information, the rest is up to you all.
-
-Also, you are free and encouraged to share this project after the course and to add it to your portfolio. Just be sure to fork it to your GitHub at the end of the quarter!
+Our goal is to be able to successfully be able to predict whether or not to buy or sell stock from the S&P500 based on various factors. Since we wanted to have ample data points we chose to have our data range from 1985 - 2022. The main factors we decided on was daily candle stick data, economics-related news sentiment of a given day, gold rates, and oil/energy prices. Since we wanted to predict whether or not we should by stock we performed various binary classification algorithms. What determined if the algorithm worked well was if it succesfully predicted buy or sell (1 & -1). Whether or not if something should be bought was if the average of high and low was greater than zero and sell if it was less than zero. High and low where standardized with sklearn's StandardScaler package before the average was calculated. What we saw was that logistic regression was the best at predicting buy or sell with an accuarcy of 70%. This meant that it was able to successfully predict whether to buy or sell 70% of the time. We had 810 false positives and 42 false negatives. So this model does the best at not selling when it isn't suppose to. The other models had similar false postive and false negative rate so they do not provide anything more benefical than our logistic regression model.
